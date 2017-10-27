@@ -1,0 +1,39 @@
+{
+    "name": "powellblyth/dribly",
+    "description": "Sensors for Dribly",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0",
+        "laravel/lumen-framework": "<5.5.16",
+        "vlucas/phpdotenv": "~2.2"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "^6.2",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Dribly\\": "dribly-database/app/Dribly"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true
+    }
+}
